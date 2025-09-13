@@ -1,0 +1,101 @@
+/* amazonia.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f8ff; /* azul muy claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hijo {
+    flex: 1 1 100%;
+    max-width: 1200px;
+}
+
+.nieto {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.nieto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(44, 62, 80, 0.2);
+}
+
+.nieto h2 {
+    color: #2980b9;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.nieto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #2980b9;
+}
+
+.nieto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+.nieto ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .padre {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nieto h2 {
+        font-size: 1.5rem;
+    }
+}

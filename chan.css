@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff; /* Azul claro */
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    background-color: #0077b6;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #023e8a;
+    margin-top: 0;
+}
+
+/* Contenedores */
+.padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.hijo, .nieto {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 450px;
+    padding: 20px;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+}
+
+.hijo:hover, .nieto:hover {
+    transform: scale(1.02);
+}
+
+/* Imágenes */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Listas y texto */
+ul {
+    padding-left: 20px;
+}
+
+ul p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+    border-top: 4px solid #0077b6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .padre {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .hijo, .nieto {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

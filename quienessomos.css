@@ -1,0 +1,116 @@
+/* ===== RESETEO BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILO GENERAL DEL BODY ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d0e7f9; /* azul claro suave */
+    color: #2e2e3a; /* gris oscuro para texto */
+    padding: 25px;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ===== ESTILO DEL HEADER ===== */
+header {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffffee; /* blanco semitransparente */
+    padding: 40px 50px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border: 3px solid #239fb5; /* borde rosa púrpura suave */
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 12px 45px rgba(20, 183, 17, 0.6);
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+header h1 {
+    font-size: 3rem;
+    color: #ab2c6f; /* rosa púrpura oscuro */
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px #d494bbaa;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.padre {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ===== PÁRRAFOS ===== */
+.padre p {
+    flex: 1 1 400px;
+    font-size: 1.2rem;
+    color: #4a3b57; /* púrpura grisáceo */
+    text-align: justify;
+    margin-bottom: 25px;
+    background: #fbe8f1; /* rosa muy claro */
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgba(171, 44, 111, 0.15);
+    transition: background 0.3s ease;
+}
+
+.padre p:hover {
+    background: #12e1cc; /* rosa púrpura más intenso */
+    color: white;
+    box-shadow: 2px 2px 15px rgba(44, 114, 171, 0.4);
+}
+
+/* ===== IMAGEN ===== */
+.padre img {
+    flex: 1 1 400px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(200, 92, 167, 0.4);
+    object-fit: cover;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.padre img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 14px 40px rgba(144, 200, 92, 0.7);
+}
+
+/* ===== DISEÑO RESPONSIVO ===== */
+@media (max-width: 720px) {
+    header {
+        padding: 30px 25px;
+        border-width: 2px;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+        letter-spacing: 1.5px;
+    }
+
+    .padre {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .padre p, .padre img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .padre img {
+        margin-top: 25px;
+    }
+}

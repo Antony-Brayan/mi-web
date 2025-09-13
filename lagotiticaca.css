@@ -1,0 +1,116 @@
+/* amazonia.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body con fuente legible y fondo suave */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e0f7fa; /* azul muy claro */
+    color: #1c004d; /* verde oscuro */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedor padre */
+.padre {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffffffdd; /* blanco con algo de transparencia */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 77, 64, 0.2);
+}
+
+/* Hijo para controlar la disposición, aunque ahora solo es uno */
+.hijo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cada sección nieto */
+.nieto {
+    background-color: #b2dfdb; /* verde agua suave */
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 77, 64, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para hacer más interactivo */
+.nieto:hover {
+    background-color: #80cbc4;
+}
+
+/* Títulos principales y secundarios */
+h1 {
+    text-align: center;
+    color: #00796b; /* verde azulado */
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    text-shadow: 1px 1px 2px #004d40aa;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #004d40;
+}
+
+/* Imágenes responsivas y estilizadas */
+.nieto img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Listas con buena separación */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+/* Párrafos dentro de listas o por separado */
+.nieto p {
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #00695c;
+}
+
+/* Footer centrado con color discreto */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #004d40aa;
+    margin-top: 40px;
+    border-top: 1px solid #004d4088;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .padre {
+        padding: 10px 15px;
+    }
+}

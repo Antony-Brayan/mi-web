@@ -1,0 +1,114 @@
+/* amazonia.css */
+
+/* Reset básico para márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body: fondo claro y tipografía legible */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e9f5f2; /* Verde agua claro */
+    color: #2c3e50; /* Azul oscuro para texto */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #145a32; /* Verde oscuro */
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenedor principal flex para responsividad */
+.padre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cada sección 'nieto' es una tarjeta */
+.nieto {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 350px;
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.nieto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Subtítulos */
+.nieto h2 {
+    color: #196f3d; /* Verde mediano */
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 8px;
+}
+
+/* Imágenes dentro de cada tarjeta */
+.nieto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    height: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Párrafos dentro de listas para texto más claro */
+.nieto ul p {
+    margin-bottom: 12px;
+    font-style: italic;
+    color: #566573;
+}
+
+/* Listas */
+.nieto ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #34495e;
+}
+
+/* Cada item de lista */
+.nieto ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Footer centrado y simple */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-top: 1px solid #27ae60;
+    color: #145a32;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .padre {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nieto {
+        max-width: 90%;
+    }
+}

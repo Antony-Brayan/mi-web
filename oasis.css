@@ -1,0 +1,112 @@
+/* amazonia.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #0288d1;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Contenedor padre */
+.padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cada hijo */
+.hijo {
+    flex: 1 1 100%;
+    max-width: 1200px;
+}
+
+/* Cada nieto (bloques de contenido) */
+.nieto {
+    background: #ffffffdd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nieto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Subtítulos */
+.nieto h2 {
+    color: #01579b;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #0288d1;
+    padding-bottom: 8px;
+}
+
+/* Imágenes */
+.nieto img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(2,136,209,0.3);
+}
+
+/* Listas */
+.nieto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.nieto ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px 10px;
+    background-color: #0288d1;
+    color: white;
+    font-weight: 600;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -2px 10px rgba(2,136,209,0.4);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .nieto img {
+        max-height: 200px;
+    }
+
+    .nieto h2 {
+        font-size: 1.4rem;
+    }
+}

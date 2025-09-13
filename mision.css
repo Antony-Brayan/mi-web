@@ -1,0 +1,101 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f7fa; /* fondo azul claro suave */
+    color: #333;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    max-width: 850px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    border: 2px solid #2a9d8f; /* borde verde azulado */
+}
+
+/* ===== TITULO ===== */
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #2a9d8f;
+    margin-bottom: 35px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* ===== CONTENEDOR PADRE ===== */
+.padre {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ===== PÁRRAFOS ===== */
+.padre p {
+    flex: 1 1 400px;
+    font-size: 1.25rem;
+    background: #d1e7e0; /* verde agua muy claro */
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(42, 157, 143, 0.25);
+    color: #1f4f4f;
+    text-align: justify;
+    transition: background-color 0.3s ease;
+}
+
+.padre p:hover {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+/* ===== IMAGEN ===== */
+.padre img {
+    flex: 1 1 350px;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(42, 157, 143, 0.5);
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.padre img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 35px rgba(42, 157, 143, 0.8);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 720px) {
+    header {
+        padding: 30px 20px;
+    }
+    header h1 {
+        font-size: 2.4rem;
+    }
+    .padre {
+        flex-direction: column;
+        align-items: center;
+    }
+    .padre p, .padre img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .padre img {
+        margin-top: 25px;
+    }
+}

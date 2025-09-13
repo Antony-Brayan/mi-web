@@ -1,0 +1,100 @@
+/* amazonia.css */
+
+/* RESET BASICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUENTE Y COLORES GENERALES */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f9f9;
+  color: #2c3e50;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #1abc9c;
+  text-shadow: 1px 1px 2px #16a085;
+}
+
+/* CONTENEDORES */
+.padre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hijo {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.nieto {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  flex: 1 1 450px;
+  transition: transform 0.3s ease;
+}
+
+.nieto:hover {
+  transform: translateY(-5px);
+}
+
+/* SUBTÍTULOS */
+h2 {
+  color: #2980b9;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+/* IMÁGENES */
+.nieto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(26, 188, 156, 0.3);
+}
+
+/* LISTAS */
+ul {
+  list-style: disc inside;
+  padding-left: 15px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #34495e;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  border-top: 1px solid #bdc3c7;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nieto {
+    flex: 1 1 100%;
+  }
+}
